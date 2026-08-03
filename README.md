@@ -39,6 +39,7 @@ The legislative term opened with the São Sebastião landslides (56 deaths) and 
 
 ## Methodology
 
+The Jupyter notebook was cleaned up and reorganized to follow the final data-cleaning and analysis order.
 The process included:
 
 - reading the raw earmarks CSV from the Transparency Portal
@@ -47,7 +48,6 @@ The process included:
 - filtering the Atlas to five geo-hydrological event types (floods, flash floods, waterlogging, mass movements and heavy rainfall)
 - averaging the two risk indices into a single score per municipality and matching all three sources by official IBGE code
 - exporting the map files as GeoJSON, simplified with geopandas and Mapshaper so they stay light enough for the browser, plus one CSV per chart
-
 All grouping was done by IBGE code only.
 
 The charts were built in Flourish: a line chart (deaths per year), a three-step waffle (the funnel from R$ 164 billion to R$ 54.6 million), three projection maps (risk levels, the 14 funded high-risk municipalities, the four maximum-risk municipalities), a scatter plot (events × funding per municipality) and a slope chart (each state's share of events vs. its share of money). The waffle steps are static images.

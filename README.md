@@ -20,6 +20,15 @@ The legislative term opened with the São Sebastião landslides (56 deaths) and 
 - 172 municipalities recorded deaths from geo-hydrological disasters since 2023; 165 of them (96%) never received an environmental earmark
 - Rio Grande do Sul concentrated 24.8% of the country's disaster events and received 1.9% of the environmental money; Pará, with 6% of the events, received zero for the environment.
 - The largest environmental shares went to São Paulo (R$ 75 million, mostly animal protection) and Tocantins (R$ 71 million, accessibility and modernization).
+- Funding barely correlates with a municipality's projected risk (0.04) or its recorded disasters (0.05). Projected risk and recorded events, however, also barely correlate, so the story treats them as independent measures.
+
+|                    | Funding | Landslide | Flood | Avg. risk | Events |
+|--------------------|:-------:|:---------:|:-----:|:---------:|:------:|
+| **Funding**        |  1.00   |   0.05    | 0.03  |   0.04    |  0.05  |
+| **Landslide risk** |  0.05   |   1.00    | 0.90  |   0.97    | −0.01  |
+| **Flood risk**     |  0.03   |   0.90    | 1.00  |   0.98    | −0.05  |
+| **Avg. risk**      |  0.04   |   0.97    | 0.98  |   1.00    | −0.03  |
+| **Events**         |  0.05   |  −0.01    | −0.05 |  −0.03    |  1.00  |
 
 ## Data sources
 
@@ -31,13 +40,17 @@ The legislative term opened with the São Sebastião landslides (56 deaths) and 
 ## Methodology
 
 The process included:
-- reading the raw earmarks CSV
-- defining the Inesc action-code
+
+- reading the raw earmarks CSV from the Transparency Portal
+- extracting the Inesc environmental action-code table from a PDF and filtering the earmarks with it
 - pulling risk scores and municipal boundaries from AdaptaBrasil's API
 - filtering the Atlas to five geo-hydrological event types (floods, flash floods, waterlogging, mass movements and heavy rainfall)
-- averaging the two risk indices into a single score per municipality, and matching all three sources by official IBGE code.
+- averaging the two risk indices into a single score per municipality and matching all three sources by official IBGE code
+- exporting the map files as GeoJSON, simplified with geopandas and Mapshaper so they stay light enough for the browser, plus one CSV per chart
 
-Grouping was done by IBGE code only.
+All grouping was done by IBGE code only.
+
+The charts were built in Flourish: a line chart (deaths per year), a three-step waffle (the funnel from R$ 164 billion to R$ 54.6 million), three projection maps (risk levels, the 14 funded high-risk municipalities, the four maximum-risk municipalities), a scatter plot (events × funding per municipality) and a slope chart (each state's share of events vs. its share of money). The waffle steps are static images.
 
 ## Repository contents
 
@@ -49,7 +62,7 @@ Raw source files (the Transparency Portal CSV, the Atlas spreadsheet, the Inesc 
 
 ## New skills & what could have been different
 
-In this project I got better at producing charts and maps in Flourish, and at building scrollytelling with Jonathan Soma's Scrollama template. I also became more comfortable with data-cleaning and analysis strategies in pandas.
+In this project I got better at producing charts and maps in Flourish (and lear how to proper export data for them), and at building scrollytelling with Jonathan Soma's Scrollama template. I also became more comfortable with data-cleaning and analysis strategies in pandas.
 
 With more time, though, I would have used D3 for the maps (I wasn't happy with how they turned out). I would also have investigated the cited cities more deeply: what events hit them, what was promised, and what was never delivered. And I would like to look into the earmarks that did flow, and into which lawmakers distributed them.
 

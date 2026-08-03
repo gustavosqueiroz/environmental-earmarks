@@ -1,0 +1,13 @@
+# raw data (too large for GitHub; download links in the README)
+data/dados_brutos/
+
+# mac
+.DS_Store
+
+# jupyter
+.ipynb_checkpoints/
+
+# python
+__pycache__/
+venv/
+.venv/

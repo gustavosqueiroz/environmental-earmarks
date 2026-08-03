@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brazil's most disaster-hit cities got no environmental earmark money</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    background: #f8f5ef;
+    color: #1a1a1a;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  /* ---------- header ---------- */
+  .header-photo {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    display: block;
+  }
+  .photo-credit {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 6px 20px 0;
+    font-size: 13px;
+    color: #777;
+  }
+  .photo-credit a { color: #777; }
+  .header-text {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px 10px;
+  }
+  .header-text h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 15px;
+  }
+  .header-text p.subtitle {
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: #333;
+  }
+  .header-text p.byline {
+    font-size: 15px;
+    color: #777;
+    margin: 0;
+  }
+
+  /* ---------- article ---------- */
+  article {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 50px 0 10px;
+  }
+  a { color: #6B1F2A; }
+
+  .chart {
+    margin: 40px 0;
+  }
+
+  /* ---------- scrollytelling ---------- */
+  .scrolly {
+    position: relative;
+    display: flow-root;
+  }
+  .sticky {
+    position: sticky;
+    top: 5vh;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sticky .layer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sticky .layer.active { opacity: 1; pointer-events: auto; }
+  .sticky img {
+    max-width: 100%;
+    max-height: 85vh;
+  }
+  .sticky iframe {
+    width: 100%;
+    height: 85vh;
+    border: none;
+  }
+  .step {
+    margin: 0 auto 90vh;
+    max-width: 420px;
+    background: #fff;
+    padding: 18px 22px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    position: relative;
+    z-index: 2;
+  }
+  .step:first-of-type { margin-top: 50vh; }
+  .step:last-of-type { margin-bottom: 60vh; }
+
+  /* maps: full-width section, text left / map right */
+  .scrolly-side {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+  .scrolly-side .sticky {
+    top: 0;
+    height: 100vh;
+    margin-left: 34vw;
+    width: 66vw;
+  }
+  .scrolly-side .step {
+    margin: 0 0 90vh 4vw;
+    max-width: 26vw;
+  }
+  .scrolly-side .step:first-of-type { margin-top: 55vh; }
+  .scrolly-side .step:last-of-type { margin-bottom: 120vh; }
+  @media (max-width: 900px) {
+    .scrolly-side { width: auto; margin-left: 0; }
+    .scrolly-side .sticky { margin-left: 0; width: 100%; height: 90vh; top: 5vh; }
+    .scrolly-side .step { max-width: 420px; margin: 0 auto 90vh; }
+    .scrolly-side .step:first-of-type { margin-top: 50vh; }
+  }
+
+  @media (max-width: 600px) {
+    .header-text h1 { font-size: 36px; }
+  }
+
+  /* ---------- methodology ---------- */
+  .methodology {
+    font-size: 75%;
+    color: #555;
+    border-top: 1px solid #ccc;
+    margin-top: 60px;
+    padding-top: 25px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<img class="header-photo" src="img/header.jpg" alt="Aerial view of flooded streets in Canoas, Rio Grande do Sul, May 2024">
+<p class="photo-credit">Photo: Ricardo Stuckert/PR, via <a href="https://www.flickr.com/photos/lulaoficial/53700500641/">Lula Oficial/Flickr</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></p>
+<div class="header-text">
+  <h1>Brazil's most disaster-hit cities got no environmental earmark money</h1>
+  <p class="subtitle">Over four years, Congress allocated R$ 164 billion in public funds. Just 0.03% went to urban environmental measures, and almost none reached the municipalities most affected by floods and landslides. Even cities identified by the government's own models as facing the highest risk were left out.</p>
+  <p class="byline">By Gustavo Queiroz</p>
+</div>
+
+<article>
+
+<!-- ================= 1. SÃO SEBASTIÃO ================= -->
+<p>In February 2023, just weeks after Brazil's new Congress took office, landslides swept through the coastal city of São Sebastião, in São Paulo state. Fifty-six people died in what would become the deadliest single disaster during the current legislative term. The tragedy sparked a national debate about the need to prevent future disasters.</p>
+
+<!-- ================= 2. RS 2024 ================= -->
+<p>Fourteen months later, Rio Grande do Sul was submerged. Brazil's worst flood on record killed 184 people, affected 2.4 million residents and reached 478 municipalities. The Guaíba River rose to an unprecedented level. Congress responded by approving two laws designed to make it easier to reallocate and transfer parliamentary earmarks to civil protection and disaster-response efforts.</p>
+
+<p>The money, however, did not follow the evidence.</p>
+
+<p>Over the last four years, Rio Grande do Sul accounted for 24.8% of all climate-related disasters recorded in Brazil, yet received just 1.9% of environmental earmark funding. In São Paulo, São Sebastião never received a single real in environmental earmarks directed at disaster-prevention measures such as slope stabilization and risk reduction.</p>
+
+<p>These disasters were not isolated events. Between 2023 and 2026, floods, flash floods and landslides killed 497 people across the country. During the same period, Congress controlled an unprecedented volume of discretionary funding that could, in principle, be used to address problems like these.</p>
+
+<!-- ================= 3. WHAT EARMARKS ARE ================= -->
+<p>Parliamentary earmarks, through which senators and federal deputies direct portions of the federal budget, have become one of Brazil's main spending instruments. In 2025, they accounted for a record 30% of the federal government's discretionary spending, totaling R$ 50.4 billion. Critics describe the system as opaque and difficult to track. Supporters argue lawmakers are better positioned than ministries in Brasilia to understand local needs.</p>
+
+<!-- ================= 4. CHART: DEATHS PER YEAR ================= -->
+<div class="chart">
+  <div class="flourish-embed flourish-chart" data-src="visualisation/29860105"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29860105/thumbnail" width="100%" alt="Line chart of annual deaths from geo-hydrological disasters in Brazil, 1991-2025. Deaths rise from under 40 a year in the 1990s and spike sharply in 2011 (947), 2022 (600) and 2024 (266), never returning to 1990s levels." /></noscript></div>
+</div>
+
+<p>Funding did rise after the major disasters, roughly doubling after the tragedies. Environmental earmarks increased from R$ 110 million in 2023 to R$ 176 million in 2024 and R$ 209 million in 2025. Another R$ 88 million has been allocated so far in 2026, an ongoing budget year.</p>
+
+<p>Yet a year after Brazil's worst flood, the distribution of funds still bore little relationship to either risk or impact.</p>
+
+<p>Research on climate adaptation consistently highlights the central role of municipalities in reducing disaster risk. Cities are responsible for building drainage systems, reinforcing slopes and relocating families from vulnerable areas, for example. But almost none of the money reached the municipalities most affected by floods and landslides. The same pattern appears in the government's own risk projections, as well as across entire states and regions repeatedly struck by natural disasters.</p>
+
+<!-- ================= 5. WAFFLE SCROLLY ================= -->
+<section class="scrolly" id="waffle-scrolly">
+  <div class="sticky">
+    <div class="layer active"><img src="img/waffle1.png" alt="Grid of coin icons representing all R$ 164.2 billion in congressional earmarks, 2023-2026, all in the same olive color."></div>
+    <div class="layer"><img src="img/waffle2.png" alt="The same grid with the municipal share highlighted: 5.4% of the coins in a cinnamon color."></div>
+    <div class="layer"><img src="img/waffle3.png" alt="The same grid with the municipal environmental share highlighted: a fraction of a single coin stack in dark red."></div>
+  </div>
+  <div class="step" data-layer="0">
+    <p>Between 2023 and 2026, Congress earmarked <strong>R$ 164.2 billion</strong>. Each stack of coins represents R$ 16.4 million.</p>
+  </div>
+  <div class="step" data-layer="1">
+    <p>Only <strong>5.4%</strong> of that amount, or R$ 8.8 billion, was directed specifically to municipalities. The remainder stayed at the federal or state level.</p>
+  </div>
+  <div class="step" data-layer="2">
+    <p>Of the total, just <strong>R$ 54.6 million</strong> went to environmental measures in cities. That amounts to 0.03% of all earmark funding and reached only 24 of Brazil's 5,570 municipalities.</p>
+  </div>
+</section>
+
+<!-- ================= 6. BRAZIL KNOWS WHERE RISK IS ================= -->
+<h2>Brazil knows where risk is</h2>
+
+<p>When it comes to disaster risk, Brazil already knows which municipalities are most vulnerable.</p>
+
+<p>AdaptaBrasil, a platform developed by the Ministry of Science and Technology as part of Brazil's commitments under the Paris Agreement, models climate risks for every municipality in the country. Among its indicators are two measures of geo-hydrological risk: flooding and landslides.</p>
+
+<p>For this report, the two indices were combined into a single risk score for each municipality. Developed in 2015, the model projects municipalities' vulnerability to geo-hydrological disasters through 2030. The funding data analyzed cover all types of parliamentary earmarks, including individual amendments, caucus amendments and special transfers, a mechanism that allows funds to be transferred with fewer administrative requirements. The analysis covers the 2023-2026 period, corresponding to the current congressional and presidential terms. All funding data were obtained from Brazil's federal Transparency Portal.</p>
+
+<p>Projects classified as environmental earmarks follow the methodology developed by the Institute for Socioeconomic Studies (Inesc). The classification includes both disaster-risk management measures, such as prevention, preparedness, response and recovery, and climate policies related to mitigation and adaptation.</p>
+
+<p>Of the 269 environmental earmarks identified during the period, 239, or 89%, could not be linked to a specific municipality because they were allocated at the state or federal level. The maps below consider only the 30 earmarks that could be geographically traced.</p>
+
+<!-- ================= 7. MAP SCROLLY: 3 BEATS ================= -->
+<section class="scrolly scrolly-side" id="map-scrolly">
+  <div class="sticky">
+    <div class="layer active"><iframe src="https://flo.uri.sh/visualisation/29861565/embed" title="Map of Brazil's 5,570 municipalities colored by geo-hydrological risk level" loading="lazy"></iframe></div>
+    <div class="layer"><iframe src="https://flo.uri.sh/visualisation/29861771/embed" title="Map of the 1,299 highest-risk municipalities; the 14 that received environmental earmarks are marked in blue" loading="lazy"></iframe></div>
+    <div class="layer"><iframe src="https://flo.uri.sh/visualisation/29862383/embed" title="Map highlighting the four maximum-risk municipalities, none of which received earmarks" loading="lazy"></iframe></div>
+  </div>
+  <div class="step" data-layer="0">
+    <p>This is Brazil's geo-hydrological risk map. A total of <strong>3,416 municipalities</strong>, six in every ten, face at least a medium risk of floods or landslides.</p>
+  </div>
+  <div class="step" data-layer="1">
+    <p>These are the <strong>1,299</strong> municipalities classified as high or very high risk. Only <strong>14 of them</strong>, barely visible on the map, received any environmental earmark between 2023 and 2026. The correlation between a municipality's risk score and the funding it received is <strong>0.04</strong> on a scale from 0 to 1. In statistical terms, virtually no relationship exists.</p>
+  </div>
+  <div class="step" data-layer="2">
+    <p>Shown in red are the four municipalities that received the maximum possible risk score: <strong>Pilõezinhos (PB), Itambé (PE), Água Preta (PE) and Afuá (PA)</strong>. None received a single real in environmental earmarks.</p>
+  </div>
+</section>
+
+<p>Projected risk and recorded disasters do not always overlap, but the mismatch persists under both measures. Even so, local news archives show recurring reports of severe rainfall and flooding in these municipalities.</p>
+
+<h2>Nine of the ten hardest-hit cities got nothing</h2>
+
+<!-- ================= 8. IPOJUCA ================= -->
+<p>No municipality has recorded more geo-hydrological disasters since 2023 than Ipojuca, a coastal city in Pernambuco just south of Recife. During the period, it registered 47 events: 43 mass movements, two heavy-rain incidents and two floods. Yet Ipojuca received no environmental earmark funding.</p>
+
+<!-- ================= 9. THE ATLAS ================= -->
+<p>Brazil's official disaster archive is the Digital Disaster Atlas, maintained by the Ministry of Regional Development using civil-defense reports dating back to 1991. For geo-hydrological events alone, including floods, flash floods, waterlogging, landslides and intense rainfall, it records 29,353 occurrences, 4,612 deaths and R$ 84 billion in material losses.</p>
+
+<p>Among the ten municipalities with the highest number of geo-hydrological disasters since 2023, spread across six states and five regions, nine received no environmental earmark funding. The sole exception was Brusque, in Santa Catarina, which received R$ 340,000.</p>
+
+<h2>Where people died, money didn't follow</h2>
+
+<p>Alongside São Sebastião, another 171 municipalities have recorded at least one death from geo-hydrological disasters since 2023. Of these 172 municipalities, 165, or 96%, never received an environmental earmark.</p>
+
+<!-- ================= 10. SCATTER ================= -->
+<div class="chart">
+  <div class="flourish-embed flourish-scatter" data-src="visualisation/29862930"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29862930/thumbnail" width="100%" alt="Scatter plot of 2,317 Brazilian municipalities: disaster events in 2023-2026 against environmental earmark money. Nearly every dot sits on the zero line; a few blue dots mark the ones that received anything." /></noscript></div>
+</div>
+
+<p>Each point on the chart represents a municipality that recorded at least one disaster during the period. Most sit directly on the zero-funding line. The largest recipient, Várzea Grande in Mato Grosso, appears near the left edge of the graph.</p>
+
+<p>The pattern runs in both directions. The municipalities most affected by disasters received almost nothing, while the largest recipients of environmental earmarks experienced relatively few events.</p>
+
+<!-- ================= 11. STATES ================= -->
+<h2>States show the same mismatch</h2>
+
+<p>Part of the explanation is structural. Municipalities have historically received only a small share of parliamentary earmark funding, with most resources flowing through state and federal channels.</p>
+
+<!-- ================= 12. SLOPE ================= -->
+<div class="chart">
+  <div class="flourish-embed flourish-slope" data-src="visualisation/29863070"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29863070/thumbnail" width="100%" alt="Slope chart comparing each Brazilian state's share of disaster events with its share of environmental earmark money, 2023-2026. Rio Grande do Sul falls from 24.8% to 1.9% and Pará to zero, while São Paulo and Tocantins take the largest shares of the money." /></noscript></div>
+</div>
+
+<p>Yet the disconnect remains evident even at the state level.</p>
+
+<p>Following the 2024 catastrophe, Rio Grande do Sul accounted for nearly a quarter of all geo-hydrological disasters recorded in Brazil. Nevertheless, it received less than 2% of environmental earmark funding. Even Canoas, one of the municipalities hardest hit by the floods, where 31 people died, received just R$ 200,000.</p>
+
+<p>Pará, meanwhile, accounted for approximately 6% of all recorded disasters. Over four years, it registered 254 intense-rain events, 24 waterlogging episodes, 20 flash floods, 19 landslides and 19 floods. The state received R$ 4.6 billion in total earmarks, but none for environmental measures.</p>
+
+<p>The largest shares of environmental funding went instead to São Paulo and Tocantins, two states that together accounted for barely 3% of all recorded events.</p>
+
+<p>São Paulo topped the list with R$ 75 million directed toward animal protection and welfare projects. Tocantins followed with R$ 71 million allocated to accessibility and technological modernization initiatives.</p>
+
+<p>When it comes specifically to disaster prevention, Santa Catarina led the country, receiving R$ 52 million for projects aimed at flood containment and mitigation.</p>
+
+<!-- ================= 13. METHODOLOGY ================= -->
+<div class="methodology">
+  <p><strong>Methodology.</strong> Earmark data comes from Brazil's federal Transparency Portal and covers all parliamentary earmarks (individual amendments, caucus amendments and special transfers) with executed values for 2023-2026, the current congressional and presidential term. Within that data, environmental earmarks were identified using the classification developed by the Institute for Socioeconomic Studies (Inesc), which lists 97 budget action codes covering both disaster-risk management (prevention, preparedness, response and recovery) and climate mitigation and adaptation policy.</p>
+  <p>Risk levels come from AdaptaBrasil, a platform run by the Ministry of Science and Technology as part of Brazil's Paris Agreement commitments. It scores every Brazilian municipality on separate indices for landslide and flood risk. This report averaged the two into a single risk score per municipality. The model was built in 2015 and projects risk through 2030.</p>
+  <p>Disaster events and deaths come from the Atlas Digital de Desastres, maintained by the Ministry of Regional Development from civil-defense reports since 1991. This report used five geo-hydrological event types (floods, flash floods, waterlogging, mass movements and heavy rainfall) and, for municipality-level analysis, counted only events recorded from 2023 onward. Municipalities across all three sources were matched by their official IBGE code.</p>
+  <p>Each chart offers its own data download.</p>
+</div>
+
+</article>
+
+<!-- ================= SCROLLAMA ================= -->
+<script src="https://unpkg.com/scrollama"></script>
+<script>
+  // one scroller per scrolly section: each step shows its layer
+  function setupScroller(sectionId) {
+    var section = document.querySelector(sectionId);
+    var layers = section.querySelectorAll('.layer');
+
+    var scroller = scrollama();
+    scroller.setup({
+      step: sectionId + ' .step',
+      offset: 0.6
+    }).onStepEnter(function (response) {
+      var n = response.element.dataset.layer;
+      layers.forEach(function (layer, i) {
+        layer.classList.toggle('active', i == n);
+      });
+    });
+  }
+
+  setupScroller('#waffle-scrolly');
+  setupScroller('#map-scrolly');
+</script>
+
+</body>
+</html>
